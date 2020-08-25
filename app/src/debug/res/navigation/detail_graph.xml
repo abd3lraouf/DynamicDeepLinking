@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detail_graph.xml"
+    app:startDestination="@id/detailFragment"
+    >
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="me.abdelraoufsabri.learn.deeplinking.DetailFragment"
+        android:label="fragment_detail">
+        <argument
+            android:name="token"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="https://server.debug/{token}" />
+    </fragment>
+</navigation>
